@@ -6,10 +6,8 @@ const cors = require('cors');
 const routes = require('./routes');
 // variavel que ira armazernar a aplicação
 const app = express();
-// define quem acessa o app
-//app.use(cors({
-//    origin: 'https://site'
-//}));
+// define quem acessa o app. Usar no CORS: { origin: 'https://site' }
+app.use(cors());
 // Para o app compreender JSON
 app.use(express.json());
 // utilizando a routes no app.
